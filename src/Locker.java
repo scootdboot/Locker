@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Locker
 {
-    // creatin all the variables
+    // creating all the variables
     private final int number;
     private final int[] comboA = new int[3];
     private final int[] comboB = new int[3];
@@ -11,7 +11,7 @@ public class Locker
     private final int[] comboD = new int[3];
     private final int[] comboE = new int[3];
     private int comboIndex = 0;
-    private final ArrayList<String> contents = new ArrayList<String>();
+    private final ArrayList<String> contents = new ArrayList<>();
 
     public Locker(int number)
     {
@@ -73,7 +73,7 @@ public class Locker
             case (3) -> { return comboD[0] + "-" + comboD[1] + "-" + comboD[2]; }
             case (4) -> { return comboE[0] + "-" + comboE[1] + "-" + comboE[2]; }
         }
-        return "what in the everloving-"; // fun way to get intellij to stop throwing a fit over potential lack of return (it will ALWAYS return something else or error out)
+        return "what in the ever-loving-"; // fun way to get intellij to stop throwing a fit over potential lack of return (it will ALWAYS return something else or error out)
     }
 
     public void nextCombination()
