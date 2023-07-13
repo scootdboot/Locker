@@ -48,11 +48,12 @@ public class Locker
         output += "D: " + comboD[0] + "-" + comboD[1] + "-" + comboD[2] + "\n";
         output += "E: " + comboE[0] + "-" + comboE[1] + "-" + comboE[2] + "\n";
         output += "Contents: ";
-        for (String item : contents)
+        for (int i = 0; i < contents.size() - 1; i++)
         {
-            output += item + ", ";
+            output += contents.get(i) + ", ";
         }
-        output = output.substring(0, output.length() - 3);
+        if (contents.size() != 0)
+            output += contents.get(contents.size() - 1);
         return output;
     }
 
@@ -82,11 +83,12 @@ public class Locker
     public String getContents()
     {
         String output = "";
-        for (String item : contents)
+        for (int i = 0; i < contents.size() - 1; i++)
         {
-            output += item + ", ";
+            output += contents.get(i) + ", ";
         }
-        output += "\n";
+        if (contents.size() != 0)
+            output += contents.get(contents.size() - 1);
         return output;
     }
 
