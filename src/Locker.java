@@ -32,7 +32,7 @@ public class Locker
         numAndCombos += "E: " + comboToString(4) + "\n";
 
         StringBuilder contentString = new StringBuilder(numAndCombos + "Contents: ");
-        String output;
+        String output = "";
         for (int i = 0; i < contents.size() - 1; i++)
         {
             contentString.append(contents.get(i));
@@ -43,8 +43,6 @@ public class Locker
             contentString.append(contents.get(contents.size() - 1));
             output = contentString.toString();
         }
-        else
-            output = "";
 
         return output;
     }
@@ -79,7 +77,7 @@ public class Locker
     public String getContents()
     {
         StringBuilder contentString = new StringBuilder();
-        String output;
+        String output = "";
         for (int i = 0; i < contents.size() - 1; i++)
         {
             contentString.append(contents.get(i));
@@ -90,8 +88,6 @@ public class Locker
             contentString.append(contents.get(contents.size() - 1));
             output = contentString.toString();
         }
-        else
-            output = "";
 
         return output;
     }
